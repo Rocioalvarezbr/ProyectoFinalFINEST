@@ -109,3 +109,18 @@ h6 {
   color: #eeeeee;
   text-decoration: none;
 }
+
+#buttonFiltroVentas {
+  background-color: #ff8f00;
+}
+.buttonComprarVentas {
+  background-color: rgb(72, 165, 69);
+  color: white;
+}
+.textVentas {
+  font-size: 0.9rem;
+}
+
+.textVentas {
+  font-size: 0.9rem;
+}
