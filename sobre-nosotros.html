@@ -22,6 +22,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
 
     <!-- CSS Font Awesome -->
     <link
@@ -44,18 +48,197 @@
   </head>
 
   <body>
+    <nav id="header" class="navbar navbar-expand-md fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            id="header-logo"
+            src="img/automotora_vip_logo.png"
+            alt="AutoVIP"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#links"
+          aria-controls="links"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="links" class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="ventas.html">Venta 0km</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ventas.html">Venta Usados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#contacto-modal"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
-      <h1>Sobre Nosotros</h1>
+      <h1 class="py-3">Sobre Nosotros</h1>
+      <hr />
+      <div class="row">
+        <div class="col-6">
+          <img src="img/about_us/about.jpg" alt="" class="img-fluid"/ >
+        </div>
+        <div class="col-6">
+          <h2>AutoVIP</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero atque
+            optio iure! Modi, voluptatibus consequuntur.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            recusandae incidunt nemo enim rerum et.
+          </p>
+
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
+            omnis eum inventore laboriosam aspernatur voluptates.
+          </p>
+          <button type="button" class="btn btn-outline-dark">Contacto</button>
+        </div>
+      </div>
+      <h2 class="py-4">Nuestro equipo</h2>
+      <hr />
+
+      <div class="row">
+        <div class="row">
+          <div class="card-group">
+            <div class="col-4 p-3 text-center">
+              <div class="card">
+                <img
+                  src="js/img/about_us/WhatsApp Image 2023-10-27 at 7.07.26 PM.jpeg"
+                  class="card-img-top foto"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Rocio Alvarez</h5>
+                  <p>Co-Founder</p>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text"></p>
+                  <p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-linkedin"> </i
+                    ><i class="bi bi-twitter"> </i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 p-3 text-center">
+              <div class="card">
+                <img
+                  src="img/about_us/FDF413B0-0D15-444F-AB73-014C5E8B3713_Original.jpg"
+                  class="foto card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Yennifer Ventancourte</h5>
+                  <p>Co-Founder</p>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p class="card-text"></p>
+                  <p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-linkedin"> </i
+                    ><i class="bi bi-twitter"> </i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4 p-3 text-center">
+              <div class="card">
+                <img src="..." class="card-img-top foto" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Marena Pereira</h5>
+                  <p>Co-Founder</p>
+                  <p class="card-text">
+                    This is a wider card with supporting text below as a natural
+                    lead-in to additional content. This content is a little bit
+                    longer.
+                  </p>
+                  <p>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-linkedin"> </i
+                    ><i class="bi bi-twitter"> </i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    >
+    <div id="footer" class="bg-dark">
+      <div class="container bg-dark">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="img/automotora_vip_logo.png" id="footer-logo" alt="" />
+          </div>
+
+          <div class="col-md-3">
+            <ul>
+              <li><a href="ventas.html">Venta 0km</a></li>
+              <li><a href="ventas.html">Venta Usados</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <ul>
+              <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+              <li>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#contacto-modal"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <p style="color: #ddd">Copyright &copy; AutoVIP 2023</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
 
-    <!-- JS Propio -->
     <script src="js/app.js"></script>
   </body>
 </html>
