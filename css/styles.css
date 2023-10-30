@@ -42,15 +42,6 @@ h6 {
   flex: 1;
 }
 
-#home-intro {
-  border-bottom: 4px solid #ff8f00;
-  height: 36vw;
-  background-size: cover;
-  background-position: center center;
-  background-image: url("../img/cars_home/audi_1.jpg");
-  margin-bottom: 30px;
-}
-
 #home h1 span {
   font-weight: 300;
 }
@@ -121,7 +112,10 @@ h6 {
   font-size: 0.9rem;
 }
 
-.textoSobreNosotros{
+.textoSobreNosotros {
   font-size: 0.9rem;
 }
 
+#imagenCarousel {
+  height: 36vw;
+}
