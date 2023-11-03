@@ -12,15 +12,14 @@ for (let año = añoInicio; año <= añoFinal; año++) {
 
 años.insertAdjacentHTML("beforeend", opcionesHTML);
 
+
 fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (marcas) {
-    for (const marca of marcas) {
-      marcasContainer.insertAdjacentHTML("beforeend");
-    }
-  });
+ .then(function (datosDelServidor) {
+ return datosDelServidor.json();
+ })
+ .then(function (personaje) {
+ return console.log("Nombre del personaje: " + personaje.name);
+ });
 
 
   // fetch suelto, uno es el que tienen los autos y otro que trae unos array con strings que  cada string son las diferentes marcas,hecho ese fetch hacemos un .then incertadjacenthtml) //
