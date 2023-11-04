@@ -12,8 +12,6 @@ for (let año = añoInicio; año <= añoFinal; año++) {
 
 años.insertAdjacentHTML("beforeend", opcionesHTML);
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const selectElement = document.getElementById("marcas");
 
@@ -48,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Agarrar de las options el valor de año, marca (brand), y el modelo. y guardarlo en constantes
 
-const year = ;
-const brand = ;
-const model = ;
+//const year = ;//
+//const brand = ;//
+//const model = ;//
 
-fetch(`https://ha-front-api-proyecto-final.vercel.app/cars?year=${year}&brand=${brand}&m
-odel=${model}
-`)
+//fetch(`https://ha-front-api-proyecto-final.vercel.app/cars?year=${year}&brand=${brand}&m
+//odel=${model}//
+//`)//
 
