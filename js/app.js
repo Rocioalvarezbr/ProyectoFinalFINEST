@@ -1,6 +1,11 @@
-// VENTAS - AÑO //
+// VARIABLES //
 
 const años = document.querySelector("#años");
+const marcas = document.querySelector("#marcas");
+const modelos = document.querySelector("#modelos");
+const marca1 = document.querySelector("#marca1")
+
+// VENTAS - AÑO //
 
 let añoInicio = 1900;
 let añoFinal = 2023;
@@ -13,8 +18,6 @@ for (let año = añoInicio; año <= añoFinal; año++) {
 años.insertAdjacentHTML("beforeend", opcionesHTML);
 
 // VENTAS - MARCAS //
-
-const marcas = document.querySelector("#marcas");
 
 fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
   .then(function (res) {
@@ -35,8 +38,6 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
 
 // VENTAS - MODELOS //
 
-const modelos = document.querySelector("#modelos");
-
 fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
   .then(function (res) {
     return res.json();
@@ -55,8 +56,6 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
   });
 
 // VENTAS - AUTOS //
-
-const marca1 = document.querySelector("#marca1")
 
 fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .then(function (res) {
