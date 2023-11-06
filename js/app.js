@@ -12,37 +12,47 @@ for (let año = añoInicio; año <= añoFinal; año++) {
 
 años.insertAdjacentHTML("beforeend", opcionesHTML);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const selectElement = document.getElementById("marcas");
+// VENTAS - MARCAS //
 
-  fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
-    .then((response) => response.json())
-    .then((data) => {
-      let optionsHTML = "";
+const marcas = document.querySelector("#marcas");
 
-      for (let i = 0; i < data.length; i++) {
-        optionsHTML += `<option value="${data[i]}">${data[i]}</option>`;
-      }
+fetch("https://ha-front-api-proyecto-final.vercel.app/brands")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    let opcionesHTML = "";
 
-      selectElement.insertAdjacentHTML("beforeend", optionsHTML);
-    });
-});
+    for (let i = 0; i < data.length; i++) {
+      opcionesHTML += `<option value="${data[i]}">${data[i]}</option>`;
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const selectElement = document.getElementById("modelos");
+    marcas.insertAdjacentHTML("beforeend", opcionesHTML);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
 
-  fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
-    .then((response) => response.json())
-    .then((data) => {
-      let optionsHTML = "";
+// VENTAS - MODELOS //
 
-      for (let i = 0; i < data.length; i++) {
-        optionsHTML += `<option value="${data[i]}">${data[i]}</option>`;
-      }
+const modelos = document.querySelector("#modelos");
 
-      selectElement.insertAdjacentHTML("beforeend", optionsHTML);
-    });
-});
+fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    let opcionesHTML = "";
+
+    for (let i = 0; i < data.length; i++) {
+      opcionesHTML += `<option value="${data[i]}">${data[i]}</option>`;
+    }
+
+    modelos.insertAdjacentHTML("beforeend", opcionesHTML);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
 
 // Agarrar de las options el valor de año, marca (brand), y el modelo. y guardarlo en constantes
 
@@ -53,4 +63,3 @@ document.addEventListener("DOMContentLoaded", function () {
 //fetch(`https://ha-front-api-proyecto-final.vercel.app/cars?year=${year}&brand=${brand}&m
 //odel=${model}//
 //`)//
-
