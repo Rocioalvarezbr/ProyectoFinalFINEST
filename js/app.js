@@ -54,6 +54,21 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
     console.log(err);
   });
 
+// VENTAS - AUTOS //
+
+const marca1 = document.querySelector("#marca1")
+
+fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (data) {
+    marca1.insertAdjacentHTML = cars[0].brand
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
+
 // Agarrar de las options el valor de año, marca (brand), y el modelo. y guardarlo en constantes
 
 //const year = ;//
