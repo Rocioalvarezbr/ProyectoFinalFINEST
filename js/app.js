@@ -81,7 +81,7 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
               ${auto.brand} ${auto.model}
               </h2>
               <h3 class="fs-6">
-              ${auto.year} | ${auto.price_usd} |
+              ${auto.year} | USD ${auto.price_usd.toLocaleString()} |
                 <i class="bi bi-star-fill text-warning"></i>
                 <i class="bi bi-star-fill text-warning"></i>
                 <i class="bi bi-star-fill text-warning"></i>
@@ -120,12 +120,3 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
     console.log(err);
   });
 
-// Agarrar de las options el valor de año, marca (brand), y el modelo. y guardarlo en constantes
-
-//const year = ;//
-//const brand = ;//
-//const model = ;//
-
-//fetch(`https://ha-front-api-proyecto-final.vercel.app/cars?year=${year}&brand=${brand}&m
-//odel=${model}//
-//`)//
