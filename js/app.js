@@ -3,7 +3,7 @@
 const años = document.querySelector("#años");
 const marcas = document.querySelector("#marcas");
 const modelos = document.querySelector("#modelos");
-const marca1 = document.querySelector("#marca1")
+const dataAutos = document.querySelector("#dataAutos");
 
 // VENTAS - AÑO //
 
@@ -61,8 +61,60 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .then(function (res) {
     return res.json();
   })
-  .then(function (data) {
-    marca1.insertAdjacentHTML = cars[0].brand
+  .then(function (autos) {
+    for (const auto of autos) {
+      dataAutos.insertAdjacentHTML(
+        "beforeend",
+        `<div class="row">
+          <div class="col-12 col-lg-4">
+            <div>
+              <img
+                class="img-fluid"
+                src="${auto.image}"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="d-flex justify-content-between">
+              <h2 id="marca1" class="fs-3">
+              ${auto.brand} ${auto.model}
+              </h2>
+              <h3 class="fs-6">
+              ${auto.year} | ${auto.price_usd} |
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+              </h3>
+            </div>
+            <p class="textVentas">
+            ${auto.description}
+            </p>
+            <button type="button" class="btn buttonComprarVentas textVentas">
+              <i class="bi bi-cart-fill"></i>
+              Comprar
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary text-black textVentas"
+            >
+              <i class="bi bi-plus-square"></i>
+              Mas información
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary text-black textVentas"
+            >
+              <i class="bi bi-box-arrow-right"></i>
+              Compartir
+            </button>
+          </div>
+        </div>
+        <hr>`
+      );
+    }
   })
   .catch(function (err) {
     console.log(err);
