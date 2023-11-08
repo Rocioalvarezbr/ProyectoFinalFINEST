@@ -57,6 +57,18 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/models?brand=Audi")
 
 // VENTAS - AUTOS //
 
+function estrellas(rating) {
+  let estrella = "";
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      estrella += '<i class="bi bi-star-fill text-warning"></i>';
+    } else {
+      estrella += '<i class="bi bi-star text-warning"></i>';
+    }
+  }
+  return estrella;
+}
+
 fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .then(function (res) {
     return res.json();
@@ -81,12 +93,11 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
               ${auto.brand} ${auto.model}
               </h2>
               <h3 class="fs-6">
-              ${auto.year} | USD ${auto.price_usd.toLocaleString()} |
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
-                <i class="bi bi-star-fill text-warning"></i>
+              ${
+                auto.year
+              } | USD ${auto.price_usd.toLocaleString()} | ${estrellas(
+          auto.rating
+        )}
               </h3>
             </div>
             <p class="textVentas">
@@ -119,4 +130,3 @@ fetch("https://ha-front-api-proyecto-final.vercel.app/cars")
   .catch(function (err) {
     console.log(err);
   });
-
