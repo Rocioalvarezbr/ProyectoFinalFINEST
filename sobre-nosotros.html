@@ -184,7 +184,11 @@
 
           <div class="col-12 col-lg-4 p-3 text-center">
             <div class="card">
-              <img src="img/about_us/Marena.jpeg" class="card-img-top foto" alt="..." />
+              <img
+                src="img/about_us/Marena.jpeg"
+                class="card-img-top foto"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title">Marena Pereira</h5>
                 <p>Co-Founder</p>
@@ -257,7 +261,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="https://formspree.io/f/mrgwddkb" method="POST">
               <div class="mb-3">
                 <label for="name" class="form-label">Nombre</label>
                 <input
@@ -288,17 +292,16 @@
                   placeholder="Ingresar mensaje..."
                 ></textarea>
               </div>
+              <button
+                type="submit"
+                class="btn btn-success"
+                data-bs-dismiss="modal"
+              >
+                Enviar
+              </button>
             </form>
           </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-success"
-              data-bs-dismiss="modal"
-            >
-              Enviar
-            </button>
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
